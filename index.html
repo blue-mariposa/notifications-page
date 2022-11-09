@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="This is a notifications page challenge. It has number of new notifications and mark all as read. When the mark all as read is clicked the notification number changes to zero. It is responsive on all screen sizes.">
+    <meta name="keywords" content="Notification, New notification, Number of new notifications, mark all as read, responsive, notification message, picture, avatar.">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="./assets/css/notification-page.css">
+    <!-- Tittle Icon -->
+    <link rel="shortcut icon" href="./assets/images/favicon.png" sizes="32x32" type="image/png">
+    <!-- Tittle -->
+    <title>Notifications Page</title>
+    <!-- Solve Firefox Layout error -->
+    <script>
+        // To prevent Firefox FOUC, this must be here.
+        let FF_FOUC_FIX;
+    </script>
+</head>
+<body>
+
+    <!-- Start of wrapper - to enclose everything -->
+    <div class="wrapper">
+        <!-- Heading -->
+        <header>
+            <div class="main-heading">
+                <h1>Notifications</h1>
+                <!-- Number of notifications -->
+                <p class="notice-count">3</p>
+            </div>
+            <!-- Mark all as read -->
+            <p onclick="toggleReadUnread()" id="notice-read-all-btn">Mark all as read</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Mark Webber -->
+            <section class="notice-content unread">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-mark-webber.webp" alt="Profile image of Mark Webber"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name">Mark Webber</span> reacted to your recent post <span class="notice-about"> My first tournament today! </span><span class="new-notice">&bull;</span></p>
+                    <p class="notice-time">1m ago</p>
+                </div>
+            </section>
+            <!-- Angela Gray -->
+            <section class="notice-content unread">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-angela-gray.webp" alt="Profile imageof Angela Gray"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name">Angela Gray</span> followed you<span class="new-notice">&bull;</span></p>
+                    <p class="notice-time">5m ago</p>
+                </div>
+            </section>
+            <!-- Jacob Thompson -->
+            <section class="notice-content unread">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-jacob-thompson.webp" alt="Profile image of Jacob Thompson"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name">Jacob Thompson</span> has joined your group<span class="notice-about"> Chess Club</span><span class="new-notice"> &bull;</span></p>
+                    <p class="notice-time">1 day ago</p>
+                </div>
+            </section>
+            <!-- Rizky Hasanuddin -->
+            <section class="notice-content read">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Profile image of Rizky Hasanuddin"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name">Rizky Hasanuddin </span>sent you a private message<span class="new-notice"></span></p>
+                    <p class="notice-time">5 days ago</p>
+                    <!-- Private message -->
+                    <div class="notice-message">
+                        <p>Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- Kimberly Smith -->
+            <section class="notice-content read with-pic-comment">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-kimberly-smith.webp" alt="Profile image of Kimberly Smith"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name">Kimberly Smith</span> commented on your picture<span class="new-notice"></span></p>
+                    <p class="notice-time">1 week ago</p>
+                </div>
+                <!-- Comment - Picture -->
+                <div class="comment-pic"><img src="./assets/images/image-chess.webp" alt="Image of someone playing Chess"></div>
+            </section>
+            <!-- Nathan Peterson -->
+            <section class="notice-content read">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-nathan-peterson.webp" alt="Profile image of Nathan Peterson"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name"> Nathan Peterson</span> reacted to your recent post<span class="notice-about"> 5 end-game strategies to increase your win rate</span><span class="new-notice"></span></p>
+                    <p class="notice-time">2 weeks ago</p>
+                </div>
+            </section>
+            <!-- Anna Kim -->
+            <section class="notice-content read">
+                <!-- Avatar -->
+                <div class="notice-avatar"><img src="./assets/images/avatar-anna-kim.webp" alt="Profile image of Anna Kim"></div>
+                <!-- Text Content -->
+                <div class="notice-text">
+                    <p><span class="avatar-name">Anna Kim </span>left the group<span class="notice-about"> Chess Club</span><span class="new-notice"></span></p>
+                    <p class="notice-time">2 weeks ago</p>
+                </div>
+            </section>
+        </main>
+        <!-- End of main content -->
+    </div>
+    <!-- End of Wrapper -->
+
+    <!-- Start of attribution -->
+    <footer class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+		Coded by <a href="https://github.com/blue-mariposa" target="_blank">blue-mariposa</a>.
+	</footer>
+    <!-- End of attribution -->
+
+    <!-- Start of Javascript -->
+    <script src="./assets/js/news-homepage.js"></script>
+    <!-- End of Javascript -->
+    
+</body>
+</html>

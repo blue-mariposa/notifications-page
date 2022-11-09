@@ -1,0 +1,192 @@
+/* Add fonts*/
+@font-face {
+    font-family: "PlusJakarta" ;
+    src: url(../fonts/PlusJakartaSans-ExtraBold.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PlusJakarta" ;
+    src: url(../fonts/PlusJakartaSans-Medium.ttf);
+    font-style: normal;
+}
+
+/* Reset default browser settings */
+* {
+    font-family: "PlusJakarta", sans-serif;
+    margin: 0;box-sizing: border-box;
+    padding: 0;
+}
+
+/* Style all paragraph elements */
+p {
+    font-size: 1.008rem;
+    font-weight: 500;
+    line-height: 1.26rem;
+}
+
+/* body */
+body {
+    background-color: hsl(210, 60%, 98%);
+    max-width: 1440px;
+}
+
+.wrapper {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 6px hsl(219, 14%, 63%);
+    border-radius: 0.63rem;
+    max-width: 650px;
+    margin: 3.78rem auto 1.575rem;
+    padding: 1.89rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-heading h1 {
+    display: inline-block;
+    font-size: 1.26rem;
+    font-weight: 800;
+    line-height: 1.26rem;
+}
+
+.main-heading p {
+    background-color: hsl(219, 85%, 26%);
+    border-radius: 0.315rem;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    line-height: 1.26rem;
+    margin-left: 0.504rem;
+    padding: 0.1575rem 0.504rem;
+}
+
+#notice-read-all-btn {
+    color: hsl(219, 12%, 42%);
+    font-size: 0.882rem;
+}
+
+/* Text color on mouse hover */
+#notice-read-all-btn:hover,
+.avatar-name:hover,
+.notice-about:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+/* Main content */
+main {
+    margin-top: 1.25rem;
+}
+
+main .notice-content {
+    border-radius: 0.63rem;
+    column-gap: 0.938rem;
+    display: flex;
+    font-size: 0.882rem;
+    margin-top: 0.6rem;
+    padding: 1rem;
+}
+
+main .notice-content:first-of-type {
+    margin-top: 0;
+}
+
+main .notice-content:hover {
+    background-color:  hsl(210, 60%, 98%);
+}
+
+.unread {
+    background-color: hsl(211, 68%, 94%);
+}
+
+.notice-avatar,
+.comment-pic {
+    cursor: pointer;
+    width: 55px;
+}
+
+.notice-avatar img,
+.comment-pic img {
+    width: 100%;
+}
+
+.notice-text {
+    width: 100%;
+}
+
+.notice-text p {
+    color: hsl(219, 12%, 42%);
+    font-size: 0.935rem;
+    font-weight: 500;
+    line-height: 1.26rem;
+}
+
+.avatar-name {
+    color: hsl(0, 100%, 0%);
+    font-weight: 800;
+    margin-right: 0.15rem;
+}
+
+.notice-about {
+    font-weight: 800;
+    margin-left: 0.15rem;
+}
+
+.new-notice {
+    color: hsl(1, 90%, 64%);
+    font-size: 1rem;
+    font-weight: 800;
+    margin-left: 0.15rem;
+}
+
+.notice-message {
+    border: 1px solid hsl(219, 12%, 42%);
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.notice-message:hover {
+    background-color: hsl(205, 33%, 90%);
+    border: none;
+    cursor: pointer;
+}
+
+.with-pic-comment .notice-text {
+    width: 85%;
+}
+
+/* Attribution */
+.attribution {
+    color: hsl(224, 21%, 14%);
+    font-size: 0.9rem;
+    line-height: 2rem;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution a { 
+    color: hsl(0, 100%, 0%);
+}
+
+.attribution a:hover { 
+    color: hsl(219, 85%, 26%);
+}
+
+
+@media only screen and (max-width:500px) {
+    
+    .wrapper {
+        border-radius: 0;
+        box-shadow:none;
+        margin: 0 auto;
+        max-width: 450px;
+    }
+
+    /* Attribution */
+    .attribution {
+        background-color: hsl(205, 33%, 90%);
+    }
+}
