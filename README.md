@@ -18,6 +18,12 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 This notification page chllenge was built with accessibility in mind. Did research on suitable tags and attributes that would be accessible to screen readers. Used Html, CSS & JavaScript. 
 
+## Note: - This is an update
+
+- Changes
+  - Added a notification banner to show if there are new messages or no newmessages
+  - Added click event to each notification so that when clicked it will be marked as 'read' and notification count will be deducted.
+
 ### Screenshot
 
 ![](./screenshots/desktop-view.png)
@@ -28,6 +34,8 @@ This notification page chllenge was built with accessibility in mind. Did resear
 ![](./screenshots/active-state-message.png)
 ![](./screenshots/active-state-name.png)
 ![](./screenshots/all-unread-notifiations.png)
+![](./screenshots/desktop-banner-new-msg.png)
+![](./screenshots/desktop-banner-no-msg.png)
 
 ## My process
 - Took notes of the requirements of the project and research needed.
@@ -72,6 +80,34 @@ This notification page chllenge was built with accessibility in mind. Did resear
     <p onclick="toggleReadUnread()" id="notice-read-all-btn">Mark all as read</p>
 ```
 
+``` css
+.wrapper.show_bf::before,
+.wrapper.show_aft::after  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    padding: 1rem 0;
+    text-align: center;
+    border-left: 8px solid red;
+    transition: all ease 300ms;
+}
+
+.wrapper.show_bf::before {
+    color: red;
+    content: "You have no new messages!";
+    border-left: 8px solid red;
+}
+
+.wrapper.show_aft::after {
+    color: green;
+    content: "You have new messages!";
+    border-left: 8px solid green;
+}
+```
+
 ```js
 function toggleReadUnread() {
     // Check if there are any new notificaions. 
@@ -102,6 +138,14 @@ function toggleReadUnread() {
         markAllAsRead.innerHTML = "Mark all as read";
     }
 }
+
+const observer = new MutationObserver(noNewNoticeBanner); // Functin to call when a change is detected.
+// What to observe for. 
+// NOTE: Content of the below observtion will be passed onto the MutationObserver above.
+observer.observe(noticeCount, {
+    childList: true, // Observe the content of the notification counter.
+});
+
 ```
 
 ### Continued development
@@ -113,6 +157,8 @@ function toggleReadUnread() {
 ### Useful resources
 
 - [Javscript references](https://www.javatpoint.com/javascript-setattribute#:~:text=JavaScript%20setAttribute%28%29%20The%20setAttribute%28%29%20method%20is%20used%20to,new%20attribute%20with%20the%20specified%20name%20and%20value.) - change attribute of HTML element.
+
+- [MutationObserver](https://www.w3docs.com/learn-javascript/mutation-observer.html)
 
 ## Author
 
